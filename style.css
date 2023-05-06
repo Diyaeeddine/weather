@@ -19,7 +19,7 @@ body {
 .search_img {
   width: 40px;
   height: 40px;
-  border-radius: 50%;
+  border-radius: 80%;
 }
 .search_img:hover {
   filter: brightness(110%);
@@ -66,6 +66,21 @@ article {
   background-color: inherit;
   border: none;
 }
+#desc1,
+#desc2,
+#desc3,
+#desc4,
+#desc5 {
+  font-size: 1.2em;
+  margin-top: 5px;
+}
+.weather_humidity{
+margin: 5px 0;
+}
+#humidity1,#humidity2,#humidity3,#humidity4,#humidity5{
+font-size: 1.2em;
+}
+
 .search_city {
   border-radius: 23px;
   padding: 15px;
@@ -101,16 +116,18 @@ article {
   margin-right: 10px;
   display: inline-block;
 }
-.kmph::before {
+#humidity1::before,#humidity2::before,#humidity3::before,#humidity4::before,#humidity5::before{
   content: "";
+  display: inline-block;
+  background-image: url(humidity.png);
   vertical-align: middle;
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   background-size: cover;
   margin-right: 10px;
   display: inline-block;
-  background-image: url(wind.png);
 }
+
 .weather_tempurature::before {
   content: "";
   vertical-align: middle;
@@ -121,6 +138,7 @@ article {
   display: inline-block;
   background-image: url(thermometer.png);
 }
+
 @media screen and (max-width: 600px) {
   .search_city {
     width: 80%;
