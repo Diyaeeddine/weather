@@ -18,18 +18,46 @@ searchBtn.addEventListener("click", () => {
       let response = JSON.parse(xhr.responseText);
       console.log(response);
       for (let i = 0; i < 5; i++) {
-        document.querySelector("#day" + (i + 1)).innerHTML =
-          parseInt(Number(response.list[i].main.temp));
-        /*let weathericon = response.list[i].weather[0].icon;
+        document.querySelector("#day" + (i + 1)).innerHTML = parseInt(
+          Number(response.list[i].main.temp)
+        );
+        document.querySelector("#desc" + (i + 1)).innerHTML =
+          response.list[i].weather[0].description;
+        document.querySelector("#humidity" + (i + 1)).innerHTML = Number(
+          response.list[i].main.humidity
+        );
+      }
+
+      /*let weathericon = response.list[i].weather[0].icon;
         weathericn.src = "https://openweathermap.org/img/wn/"+weathericon+".png";
         /*console.log(weathericon)*/
-      }
       let city = response.city.name;
       yourloc.innerHTML = city;
     } else {
-      console.log("Error");
+      alert("Something is wrong");
     }
   };
 
   xhr.send();
 });
+const d = new Date();
+const weekday = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+
+function CheckDay(day) {
+  if (day + d.getDay() > 6) {
+    return day + d.getDay() - 7;
+  } else {
+    return day + d.getDay();
+  }
+}
+for (i = 0; i < 5; i++) {
+  document.querySelector("#days" + (i + 1)).innerHTML = weekday[CheckDay(i)];
+}
