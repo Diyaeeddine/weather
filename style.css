@@ -147,7 +147,6 @@ font-size: 1.2em;
     flex-direction: column;
   }
   article {
-    min-width: 200px;
     margin: 20px 0;
   }
 }
