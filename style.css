@@ -15,15 +15,17 @@ body {
   vertical-align: middle;
   cursor: pointer;
   border-radius: 50%;
+  transition: 0.3s;
 }
 .search_img {
   width: 40px;
   height: 40px;
   border-radius: 80%;
+  transition: 0.3s;
 }
 .search_img:hover {
   filter: brightness(110%);
-  transition: 0.3s;
+  
 }
 .container {
   padding: 50px;
@@ -92,10 +94,11 @@ font-size: 1.2em;
   background-color: rgba(0, 0, 0, 0.226);
   border: none;
   margin: 0 0 60px 0;
+  transition: 0.4s ease;
 }
 .search_city:hover {
   background-color: rgba(0, 0, 0, 0.438);
-  transition: 0.4s ease;
+  
 }
 .search_city:focus {
   background-color: rgba(0, 0, 0, 0.438);
